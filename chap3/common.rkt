@@ -1,5 +1,6 @@
 #lang sicp
 (#%provide
+ gcd
  display-line
  map
  stream-car
@@ -15,6 +16,11 @@
  ones
  integers
  integral)
+
+(define (gcd a b)
+  (if (= b 0)
+      a
+      (gcd b (remainder a b))))
 
 (define (display-line x)
   (display x)
